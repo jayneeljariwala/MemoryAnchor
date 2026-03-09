@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="MemoryRecord" representedClassName="MemoryRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="anchorName" optional="NO" attributeType="String"/>
+        <attribute name="audioFileName" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="note" optional="NO" attributeType="String"/>
+        <attribute name="transformData" optional="NO" attributeType="Binary" allowsExternalBinaryDataStorage="NO"/>
+    </entity>
+    <entity name="WorldMapRecord" representedClassName="WorldMapRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="savedAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="worldMapData" optional="NO" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="MemoryRecord" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="WorldMapRecord" positionX="191" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

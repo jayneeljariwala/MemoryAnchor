@@ -1,21 +1,14 @@
-//
-//  MemoryAnchorApp.swift
-//  MemoryAnchor
-//
-//  Created by Jayneel Jariwala on 09/03/26.
-//
-
 import SwiftUI
 import CoreData
 
 @main
-struct MemoryAnchorApp: App {
-    let persistenceController = PersistenceController.shared
+struct MemoryAnchorsApp: App {
+    private let dependencies = AppDependencies.live
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView(dependencies: dependencies)
+                .environment(\.managedObjectContext, dependencies.persistenceController.container.viewContext)
         }
     }
 }
